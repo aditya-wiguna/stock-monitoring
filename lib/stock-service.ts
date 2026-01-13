@@ -107,7 +107,7 @@ export async function getStockHistory(symbol: string, days: number = 30): Promis
       { validateResult: false }
     );
 
-    const stockHistory: StockHistory[] = history.map(h => ({
+    const stockHistory: StockHistory[] = history.map((h: StockHistory) => ({
       date: h.date,
       close: h.close,
       volume: h.volume,
